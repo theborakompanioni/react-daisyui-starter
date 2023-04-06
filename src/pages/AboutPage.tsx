@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
-interface AboutPageProps {
+type AboutPageProps = {
   name: ReactNode
   version: string
 }

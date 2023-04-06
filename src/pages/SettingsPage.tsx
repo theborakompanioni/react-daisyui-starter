@@ -1,6 +1,6 @@
 import { Form, Button, Checkbox, useTheme, Theme } from 'react-daisyui'
 
-import { useSettings, useSettingsDispatch } from './contexts/SettingsContext'
+import { useSettings, useSettingsDispatch } from '../contexts/SettingsContext'
 import { DataTheme } from 'react-daisyui/dist/types'
 
 const DEFAULT_THEMES = [
