@@ -28,5 +28,5 @@ root.render(
     <SettingsProvider value={{ defaultValues: defaultAppSettings }}>
       <App />
     </SettingsProvider>
-  </>
+  </>,
 )

@@ -65,8 +65,8 @@ function App() {
           />
         </Route>
         <Route id="404" path="*" element={<Navigate to={ROUTES['*']} replace={true} />} />
-      </Route>
-    )
+      </Route>,
+    ),
   )
 
   return (

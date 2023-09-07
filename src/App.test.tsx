@@ -11,7 +11,7 @@ it('should render welcome message', () => {
   render(
     <SettingsProvider value={{ defaultValues: global.__DEV__.APP_SETTINGS }}>
       <App />
-    </SettingsProvider>
+    </SettingsProvider>,
   )
 
   const sidebarTitle = screen.getByTestId('sidebar-title')

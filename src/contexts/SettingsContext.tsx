@@ -32,7 +32,7 @@ interface SettingsProviderProps {
 const SettingsProvider = ({ value: { defaultValues }, children }: ProviderProps<SettingsProviderProps>) => {
   const [settings, dispatch] = useReducer<Reducer<AppSettings, Partial<AppSettings>>>(
     settingsReducer,
-    Object.assign({}, defaultValues, JSON.parse(window.localStorage.getItem(localStorageKey()) || '{}'))
+    Object.assign({}, defaultValues, JSON.parse(window.localStorage.getItem(localStorageKey()) || '{}')),
   )
 
   useEffect(() => {

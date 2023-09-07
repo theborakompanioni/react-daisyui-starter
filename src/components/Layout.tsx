@@ -17,7 +17,6 @@ export function Layout({ title, children, drawer }: PropsWithChildren<LayoutProp
       {...drawer}
       side={<Sidebar title={title} />}
       end={false}
-      mobile={false}
       open={sidebarVisible}
       onClickOverlay={toggleSidebarVisible}
       className="font-sans"
