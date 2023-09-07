@@ -3,7 +3,7 @@ import { Form, Button, Checkbox, useTheme, Theme } from 'react-daisyui'
 import { useSettings, useSettingsDispatch } from '../contexts/SettingsContext'
 import { DataTheme } from 'react-daisyui/dist/types'
 
-const DEFAULT_THEMES = [
+const DEFAULT_THEMES: DataTheme[] = [
   'light',
   'dark',
   'cupcake',
