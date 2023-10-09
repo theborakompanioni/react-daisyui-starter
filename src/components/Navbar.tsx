@@ -25,7 +25,7 @@ function Title({ children }: PropsWithChildren<{}>) {
 
 export function Navbar({ title, toggleSidebar }: NavbarProps) {
   return (
-    <DaisyNavbar className="w-auto shadow-xl gap-2 border rounded-box m-2 mb-6">
+    <DaisyNavbar className="w-auto rounded-box border shadow gap-2 m-2 mb-6">
       <DaisyNavbar.Start>
         <div className="flex-none md:hidden">
           <Button shape="square" color="ghost" onClick={toggleSidebar}>
@@ -66,7 +66,7 @@ export function Navbar({ title, toggleSidebar }: NavbarProps) {
       </DaisyNavbar.Center>
       <DaisyNavbar.End>
         <div className="flex-none hidden md:block">
-          <Menu horizontal={true} className="gap-1">
+          <Menu horizontal={true} className="gap-2">
             <Menu.Item>
               <NavLink to={ROUTES.settings} className="rounded-lg">
                 <WrenchScrewdriverIcon className="w-6 h-6" />
