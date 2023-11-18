@@ -10,7 +10,7 @@ interface SidebarProps {
 
 export function Sidebar({ title, children }: PropsWithChildren<SidebarProps>) {
   return (
-    <div className="p-4 menu w-60 md:w-80 bg-base-100">
+    <div className="p-4 h-full menu w-60 md:w-80 bg-base-100">
       <Menu horizontal={false} className="gap-1">
         <Menu.Title className="mb-2">
           <span>{title}</span>
