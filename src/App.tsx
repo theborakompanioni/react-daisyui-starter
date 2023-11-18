@@ -7,9 +7,11 @@ import {
   RouteObject,
   RouterProvider,
   Outlet,
+  To,
 } from 'react-router-dom'
 import { Theme } from 'react-daisyui'
 import ROUTES from './routes'
+import { IndexPage } from './pages/IndexPage'
 import { SettingsPage } from './pages/SettingsPage'
 import { AboutPage } from './pages/AboutPage'
 import { Layout } from './components/Layout'
@@ -23,8 +25,8 @@ const USE_HASH_ROUTER = true
 
 const createRouter = (routes: RouteObject[]) => (USE_HASH_ROUTER ? createHashRouter : createBrowserRouter)(routes)
 
-function Index() {
-  return <Navigate to={ROUTES.about} replace={true} />
+function Redirect({ to }: { to: To }) {
+  return <Navigate to={to} replace={true} />
 }
 
 function App() {
@@ -52,7 +54,7 @@ function App() {
             </>
           }
         >
-          <Route id="home" path={ROUTES.home} index element={<Index />} />
+          <Route id="index" path={ROUTES.index} index element={<IndexPage />} />
           <Route id="settings" path={ROUTES.settings} element={<SettingsPage />} />
           <Route
             id="about"
@@ -64,7 +66,7 @@ function App() {
             }
           />
         </Route>
-        <Route id="404" path="*" element={<Navigate to={ROUTES['*']} replace={true} />} />
+        <Route id="404" path="*" element={<Redirect to={ROUTES['*']} />} />
       </Route>,
     ),
   )

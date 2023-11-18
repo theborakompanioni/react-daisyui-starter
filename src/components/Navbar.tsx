@@ -1,5 +1,5 @@
 import { PropsWithChildren, ReactNode } from 'react'
-import { Link, NavLink } from 'react-router-dom'
+import { Link, NavLink, To } from 'react-router-dom'
 import { WrenchScrewdriverIcon, InformationCircleIcon } from '@heroicons/react/24/outline'
 import { Navbar as DaisyNavbar, Button, Menu } from 'react-daisyui'
 import ROUTES from '../routes'
@@ -9,11 +9,11 @@ type NavbarProps = {
   toggleSidebar: () => void
 }
 
-function Title({ children }: PropsWithChildren<{}>) {
+function Title({ to, children }: PropsWithChildren<{ to: To }>) {
   return (
     <>
       <div className="font-title inline-flex text-2xl transition-all duration-100 md:text-3xl">
-        <Link to={{ pathname: ROUTES.home }}>
+        <Link to={to}>
           <Button className="text-xl normal-case" color="ghost">
             {children}
           </Button>
@@ -41,7 +41,7 @@ export function Navbar({ title, toggleSidebar }: NavbarProps) {
         </div>
         <div className="flex-1 hidden md:block">
           <span data-testid="sidebar-title-md">
-            <Title>
+            <Title to={ROUTES.index}>
               <>
                 <div className="w-8 mr-2">
                   <img src="logo192.png" alt="logo" />
@@ -54,7 +54,7 @@ export function Navbar({ title, toggleSidebar }: NavbarProps) {
       </DaisyNavbar.Start>
       <DaisyNavbar.Center className="flex-none md:hidden">
         <span data-testid="sidebar-title">
-          <Title>
+          <Title to={ROUTES.index}>
             <>
               <div className="w-8 mr-2">
                 <img src="logo192.png" alt="logo" />

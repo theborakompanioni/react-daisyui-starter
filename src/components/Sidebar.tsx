@@ -16,9 +16,9 @@ export function Sidebar({ title, children }: PropsWithChildren<SidebarProps>) {
           <span>{title}</span>
         </Menu.Title>
         <Menu.Item>
-          <NavLink to={{ pathname: ROUTES.home }}>
+          <NavLink to={ROUTES.index}>
             <HomeIcon className="w-6 h-6" />
-            Home
+            Index
           </NavLink>
         </Menu.Item>
         <Menu.Item>
