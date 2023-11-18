@@ -2,6 +2,7 @@ import { PropsWithChildren, ReactNode, useState } from 'react'
 import { Drawer, DrawerProps } from 'react-daisyui'
 import { Sidebar } from './Sidebar'
 import { Navbar } from './Navbar'
+import { Footer } from './Footer'
 
 type LayoutProps = {
   title: ReactNode
@@ -19,12 +20,13 @@ export function Layout({ title, children, drawer }: PropsWithChildren<LayoutProp
       end={false}
       open={sidebarVisible}
       onClickOverlay={toggleSidebarVisible}
-      className="h-screen"
+      className="min-h-screen"
     >
       <div className="md:container mx-auto">
         <Navbar title={title} toggleSidebar={toggleSidebarVisible} />
         <div className="px-4 pb-32">{children}</div>
       </div>
+      <Footer />
     </Drawer>
   )
 }

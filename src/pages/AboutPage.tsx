@@ -16,13 +16,19 @@ export function AboutPage({ name, version }: AboutPageProps) {
       <div className="my-4">
         <ul>
           <li>
-            <a href="https://tailwindcss.com/">Tailwind CSS</a>
+            <a className="link link-hover" href="https://tailwindcss.com/">
+              Tailwind CSS
+            </a>
           </li>
           <li>
-            <a href="https://daisyui.com/components">Daisy UI Components</a>
+            <a className="link link-hover" href="https://daisyui.com/components">
+              Daisy UI Components
+            </a>
           </li>
           <li>
-            <a href="https://react.daisyui.com/">React Daisy UI</a>
+            <a className="link link-hover" href="https://react.daisyui.com/">
+              React Daisy UI
+            </a>
           </li>
         </ul>
       </div>
