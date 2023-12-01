@@ -4,7 +4,7 @@ import ROUTES from '../routes'
 
 export function Footer() {
   return (
-    <div className="p-10 bg-neutral text-neutral-content sticky top-[100vh]">
+    <div className="bg-base-300 text-base-300-content sticky top-[100vh] p-10">
       <DaisyFooter className="md:container mx-auto">
         <div>
           <DaisyFooter.Title>Services</DaisyFooter.Title>

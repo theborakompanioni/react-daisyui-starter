@@ -22,8 +22,8 @@ export function Layout({ title, children, drawer }: PropsWithChildren<LayoutProp
       onClickOverlay={toggleSidebarVisible}
       className="min-h-screen"
     >
+      <Navbar title={title} toggleSidebar={toggleSidebarVisible} />
       <div className="md:container mx-auto">
-        <Navbar title={title} toggleSidebar={toggleSidebarVisible} />
         <div className="px-4 pb-32">{children}</div>
       </div>
       <Footer />
